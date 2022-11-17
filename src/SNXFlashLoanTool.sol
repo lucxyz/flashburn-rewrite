@@ -1,6 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.10;
-
 import { Ownable } from "openzeppelin-contracts/access/Ownable.sol";
 import { IERC20 } from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 import { IAddressResolver } from "synthetix/interfaces/IAddressResolver.sol";
@@ -13,9 +12,6 @@ import { IPool } from "aave-interfaces/IPool.sol";
 /// @author Ganesh Gautham Elango
 /// @title Burn sUSD debt with SNX using a flash loan
 contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
-    using SafeMath for uint256;
-    using SafeERC20 for IERC20;
-
     /// @dev Synthetix address resolver
     IAddressResolver public immutable addressResolver;
     /// @dev SNX token contract
@@ -25,7 +21,7 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
     /// @dev Aave LendingPoolAddressesProvider contract
     IPoolAddressesProvider public immutable override ADDRESSES_PROVIDER;
     /// @dev Aave LendingPool contract
-    IPool public immutable override LENDING_POOL;
+    IPool public immutable override POOL;
     /// @dev Approved DEX address
     address public immutable override approvedExchange;
     /// @dev Aave LendingPool referral code
@@ -45,9 +41,9 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
         IERC20 _snx = IERC20(synthetixResolver.getAddress("ProxyERC20"));
         snx = _snx;
         sUSD = IERC20(synthetixResolver.getAddress("ProxyERC20sUSD"));
-        ILendingPoolAddressesProvider provider = IPoolAddressesProvider(_provider);
+        IPoolAddressesProvider provider = IPoolAddressesProvider(_provider);
         ADDRESSES_PROVIDER = provider;
-        LENDING_POOL = ILendingPool(provider.getLendingPool());
+        POOL = IPool(provider.getPool());
         approvedExchange = _approvedExchange;
         _snx.approve(_approvedExchange, type(uint256).max);
     }
@@ -73,7 +69,7 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
         // Mode is set to 0 so the flash loan doesn't incur any debt
         modes[0] = 0;
         // Initiate flash loan
-        LENDING_POOL.flashLoan(
+        POOL.flashLoan(
             address(this),
             assets,
             amounts,
@@ -98,7 +94,7 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
         address initiator,
         bytes calldata params
     ) external override returns (bool) {
-        require(msg.sender == address(LENDING_POOL), "SNXFlashLoanTool: Invalid msg.sender");
+        require(msg.sender == address(POOL), "SNXFlashLoanTool: Invalid msg.sender");
         require(initiator == address(this), "SNXFlashLoanTool: Invalid initiator");
         (uint256 snxAmount, address user, bytes memory exchangeData) = abi.decode(params, (uint256, address, bytes));
         // Send sUSD to user to burn
@@ -106,7 +102,7 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
         // Burn sUSD with flash loaned amount
         ISynthetix(addressResolver.getAddress("Synthetix")).burnSynthsOnBehalf(user, amounts[0]);
         // Transfer specified SNX amount from user
-        snx.safeTransferFrom(user, address(this), snxAmount);
+        snx.transferFrom(user, address(this), snxAmount);
         // Swap SNX to sUSD on the approved DEX
         (bool success, ) = approvedExchange.call(exchangeData);
         require(success, "SNXFlashLoanTool: Swap failed");
@@ -128,4 +124,5 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
     function transferToken(address token) external onlyOwner {
         IERC20(token).transfer(msg.sender, IERC20(token).balanceOf(address(this)));
     }
+
 }
