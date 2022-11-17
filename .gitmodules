@@ -1,3 +1,6 @@
 [submodule "lib/ethers.js"]
 	path = lib/ethers.js
 	url = https://github.com/ethers-io/ethers.js
+[submodule "lib/synthetix"]
+	path = lib/synthetix
+	url = https://github.com/Synthetixio/synthetix
