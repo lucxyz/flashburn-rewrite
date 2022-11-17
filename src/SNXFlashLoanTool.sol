@@ -6,9 +6,9 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { IAddressResolver } from "synthetix/contracts/interfaces/IAddressResolver.sol";
 import { ISynthetix } from "synthetix/contracts/interfaces/ISynthetix.sol";
 import { ISNXFlashLoanTool } from "./interfaces/ISNXFlashLoanTool.sol";
-import { IFlashLoanReceiver } from "./interfaces/IFlashLoanReceiver.sol";
-import { IPoolAddressesProvider } from "./interfaces/ILendingPoolAddressesProvider.sol";
-import { IPool } from "./interfaces/ILendingPool.sol";
+import { IFlashLoanReceiver } from "aave-v3-core/contracts/flashloan/interfaces/IFlashLoanReceiver.sol";
+import { IPoolAddressesProvider } from "aave-v3-core/contracts/interfaces/PoolAddressesProvider.sol";
+import { IPool } from "aave-v3-core/contracts/interfaces/Pool.sol";
 
 /// @author Ganesh Gautham Elango
 /// @title Burn sUSD debt with SNX using a flash loan
