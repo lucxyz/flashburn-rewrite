@@ -1,4 +1,4 @@
-import { BigNumber } from "ethers";
+import { BigNumber } from "././lib/ethers/packages/bignumber/lib/bignumber.js";
 
 export const addresses: {
   [chainId: number]: {

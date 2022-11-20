@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.10;
+import { BigNumber } from "lib/ethers";
 import { Ownable } from "openzeppelin-contracts/access/Ownable.sol";
 import { IERC20 } from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 import { IAddressResolver } from "synthetix/interfaces/IAddressResolver.sol";
@@ -25,7 +26,7 @@ contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
     /// @dev Approved DEX address
     address public immutable override approvedExchange;
     /// @dev Aave LendingPool referral code
-    uint16 public constant referralCode = 185;
+    uint16 public constant referralCode = 0;
 
     /// @dev Constructor
     /// @param _snxResolver Synthetix AddressResolver address
