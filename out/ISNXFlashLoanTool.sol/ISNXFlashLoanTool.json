@@ -1,0 +1,551 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "sender",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "sUSDAmount",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "snxAmount",
+          "type": "uint256"
+        }
+      ],
+      "name": "Burn",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "approvedExchange",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "sUSDAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "snxAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "exchangeData",
+          "type": "bytes"
+        }
+      ],
+      "name": "burn",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "approvedExchange()": "84ea4501",
+    "burn(uint256,uint256,bytes)": "80a5a371"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.10+commit.fc410830\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"address\",\"name\":\"sender\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"sUSDAmount\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"snxAmount\",\"type\":\"uint256\"}],\"name\":\"Burn\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"approvedExchange\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"sUSDAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"snxAmount\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"exchangeData\",\"type\":\"bytes\"}],\"name\":\"burn\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Ganesh Gautham Elango\",\"events\":{\"Burn(address,uint256,uint256)\":{\"params\":{\"sUSDAmount\":\"Amount of sUSD debt burnt\",\"sender\":\"msg.sender\",\"snxAmount\":\"Amount of SNX to sell in order to burn sUSD debt\"}}},\"kind\":\"dev\",\"methods\":{\"approvedExchange()\":{\"details\":\"Approved DEX address\"},\"burn(uint256,uint256,bytes)\":{\"details\":\"To burn all sUSD debt, pass in type(uint256).max for sUSDAmount\",\"params\":{\"exchangeData\":\"Calldata to call exchange with\",\"sUSDAmount\":\"Amount of sUSD debt to burn (set to type(uint256).max to burn all debt)\",\"snxAmount\":\"Amount of SNX to sell in order to burn sUSD debt\"}}},\"title\":\"SNX Flash Loan Tool interface\",\"version\":1},\"userdoc\":{\"events\":{\"Burn(address,uint256,uint256)\":{\"notice\":\"Emitted on each burn\"}},\"kind\":\"user\",\"methods\":{\"burn(uint256,uint256,bytes)\":{\"notice\":\"Burn sUSD debt with SNX using a flash loan\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/interfaces/ISNXFlashLoanTool.sol\":\"ISNXFlashLoanTool\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":aave-interfaces/=lib/aave-v3-core/contracts/interfaces/\",\":aave-v3-core/=lib/aave-v3-core/\",\":aave/=lib/aave-v3-core/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":ethers/=lib/ethers/\",\":flashloan-interfaces/=lib/aave-v3-core/contracts/flashloan/interfaces/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/\",\":synthetix/=lib/synthetix/contracts/\"]},\"sources\":{\"src/interfaces/ISNXFlashLoanTool.sol\":{\"keccak256\":\"0xcd278825aca8306bf6fb62cd0e8cd8ba6e1c462ca2474c5175cfa772ac579310\",\"license\":\"GPL-3.0\",\"urls\":[\"bzz-raw://c0ba47b77e7a8aa8b48d8621028433e35fa4e7dccd3e49f128a42689a111c993\",\"dweb:/ipfs/QmdXpfYjSPRdyiJ67gdh1hfYPBaiBgCbuoYsh47zGRfCkz\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.10+commit.fc410830"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "sender",
+              "type": "address",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "sUSDAmount",
+              "type": "uint256",
+              "indexed": false
+            },
+            {
+              "internalType": "uint256",
+              "name": "snxAmount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Burn",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "approvedExchange",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "uint256",
+              "name": "sUSDAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "snxAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bytes",
+              "name": "exchangeData",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "burn"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "approvedExchange()": {
+            "details": "Approved DEX address"
+          },
+          "burn(uint256,uint256,bytes)": {
+            "details": "To burn all sUSD debt, pass in type(uint256).max for sUSDAmount",
+            "params": {
+              "exchangeData": "Calldata to call exchange with",
+              "sUSDAmount": "Amount of sUSD debt to burn (set to type(uint256).max to burn all debt)",
+              "snxAmount": "Amount of SNX to sell in order to burn sUSD debt"
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "burn(uint256,uint256,bytes)": {
+            "notice": "Burn sUSD debt with SNX using a flash loan"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":aave-interfaces/=lib/aave-v3-core/contracts/interfaces/",
+        ":aave-v3-core/=lib/aave-v3-core/",
+        ":aave/=lib/aave-v3-core/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":ethers/=lib/ethers/",
+        ":flashloan-interfaces/=lib/aave-v3-core/contracts/flashloan/interfaces/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/contracts/",
+        ":synthetix/=lib/synthetix/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/interfaces/ISNXFlashLoanTool.sol": "ISNXFlashLoanTool"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/interfaces/ISNXFlashLoanTool.sol": {
+        "keccak256": "0xcd278825aca8306bf6fb62cd0e8cd8ba6e1c462ca2474c5175cfa772ac579310",
+        "urls": [
+          "bzz-raw://c0ba47b77e7a8aa8b48d8621028433e35fa4e7dccd3e49f128a42689a111c993",
+          "dweb:/ipfs/QmdXpfYjSPRdyiJ67gdh1hfYPBaiBgCbuoYsh47zGRfCkz"
+        ],
+        "license": "GPL-3.0"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/interfaces/ISNXFlashLoanTool.sol",
+    "id": 2342,
+    "exportedSymbols": {
+      "ISNXFlashLoanTool": [
+        2341
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "36:994:12",
+    "nodes": [
+      {
+        "id": 2314,
+        "nodeType": "PragmaDirective",
+        "src": "36:24:12",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".10"
+        ]
+      },
+      {
+        "id": 2341,
+        "nodeType": "ContractDefinition",
+        "src": "137:892:12",
+        "nodes": [
+          {
+            "id": 2324,
+            "nodeType": "EventDefinition",
+            "src": "367:66:12",
+            "nodes": [],
+            "anonymous": false,
+            "documentation": {
+              "id": 2316,
+              "nodeType": "StructuredDocumentation",
+              "src": "171:191:12",
+              "text": "@notice Emitted on each burn\n @param sender msg.sender\n @param sUSDAmount Amount of sUSD debt burnt\n @param snxAmount Amount of SNX to sell in order to burn sUSD debt"
+            },
+            "name": "Burn",
+            "nameLocation": "373:4:12",
+            "parameters": {
+              "id": 2323,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2318,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "sender",
+                  "nameLocation": "386:6:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2324,
+                  "src": "378:14:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2317,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "378:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2320,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "sUSDAmount",
+                  "nameLocation": "402:10:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2324,
+                  "src": "394:18:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2319,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "394:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2322,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "snxAmount",
+                  "nameLocation": "422:9:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2324,
+                  "src": "414:17:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2321,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "414:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "377:55:12"
+            }
+          },
+          {
+            "id": 2330,
+            "nodeType": "FunctionDefinition",
+            "src": "473:60:12",
+            "nodes": [],
+            "documentation": {
+              "id": 2325,
+              "nodeType": "StructuredDocumentation",
+              "src": "439:29:12",
+              "text": "@dev Approved DEX address"
+            },
+            "functionSelector": "84ea4501",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "approvedExchange",
+            "nameLocation": "482:16:12",
+            "parameters": {
+              "id": 2326,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "498:2:12"
+            },
+            "returnParameters": {
+              "id": 2329,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2328,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2330,
+                  "src": "524:7:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 2327,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "524:7:12",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "523:9:12"
+            },
+            "scope": 2341,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 2340,
+            "nodeType": "FunctionDefinition",
+            "src": "906:121:12",
+            "nodes": [],
+            "documentation": {
+              "id": 2331,
+              "nodeType": "StructuredDocumentation",
+              "src": "539:362:12",
+              "text": "@notice Burn sUSD debt with SNX using a flash loan\n @dev To burn all sUSD debt, pass in type(uint256).max for sUSDAmount\n @param sUSDAmount Amount of sUSD debt to burn (set to type(uint256).max to burn all debt)\n @param snxAmount Amount of SNX to sell in order to burn sUSD debt\n @param exchangeData Calldata to call exchange with"
+            },
+            "functionSelector": "80a5a371",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "burn",
+            "nameLocation": "915:4:12",
+            "parameters": {
+              "id": 2338,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 2333,
+                  "mutability": "mutable",
+                  "name": "sUSDAmount",
+                  "nameLocation": "937:10:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2340,
+                  "src": "929:18:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2332,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "929:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2335,
+                  "mutability": "mutable",
+                  "name": "snxAmount",
+                  "nameLocation": "965:9:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2340,
+                  "src": "957:17:12",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 2334,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "957:7:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 2337,
+                  "mutability": "mutable",
+                  "name": "exchangeData",
+                  "nameLocation": "999:12:12",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 2340,
+                  "src": "984:27:12",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 2336,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "984:5:12",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "919:98:12"
+            },
+            "returnParameters": {
+              "id": 2339,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1026:0:12"
+            },
+            "scope": 2341,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "ISNXFlashLoanTool",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 2315,
+          "nodeType": "StructuredDocumentation",
+          "src": "62:75:12",
+          "text": "@author Ganesh Gautham Elango\n @title SNX Flash Loan Tool interface"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          2341
+        ],
+        "name": "ISNXFlashLoanTool",
+        "nameLocation": "147:17:12",
+        "scope": 2342,
+        "usedErrors": []
+      }
+    ],
+    "license": "GPL-3.0"
+  },
+  "id": 12
+}

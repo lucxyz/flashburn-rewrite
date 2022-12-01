@@ -1,0 +1,562 @@
+{
+  "_format": "ethers-rs-sol-cache-3",
+  "paths": {
+    "artifacts": "out",
+    "build_infos": "out/build-info",
+    "sources": "src",
+    "tests": "test",
+    "scripts": "script",
+    "libraries": [
+      "lib"
+    ]
+  },
+  "files": {
+    "lib/aave-v3-core/contracts/flashloan/interfaces/IFlashLoanReceiver.sol": {
+      "lastModificationDate": 1668723003499,
+      "contentHash": "69ea63f784d14fa8475af5510364ca0e",
+      "sourceName": "lib/aave-v3-core/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/aave-v3-core/contracts/interfaces/IPool.sol",
+        "lib/aave-v3-core/contracts/interfaces/IPoolAddressesProvider.sol",
+        "lib/aave-v3-core/contracts/protocol/libraries/types/DataTypes.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IFlashLoanReceiver": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IFlashLoanReceiver.sol/IFlashLoanReceiver.json"
+        }
+      }
+    },
+    "lib/aave-v3-core/contracts/interfaces/IPool.sol": {
+      "lastModificationDate": 1668718142955,
+      "contentHash": "1386013efc7ade852fbe264df545cbeb",
+      "sourceName": "lib/aave-v3-core/contracts/interfaces/IPool.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/aave-v3-core/contracts/interfaces/IPoolAddressesProvider.sol",
+        "lib/aave-v3-core/contracts/protocol/libraries/types/DataTypes.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IPool": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IPool.sol/IPool.json"
+        }
+      }
+    },
+    "lib/aave-v3-core/contracts/interfaces/IPoolAddressesProvider.sol": {
+      "lastModificationDate": 1668718142955,
+      "contentHash": "3684e0dc43efbbb778de2a2e6e4de694",
+      "sourceName": "lib/aave-v3-core/contracts/interfaces/IPoolAddressesProvider.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IPoolAddressesProvider": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IPoolAddressesProvider.sol/IPoolAddressesProvider.json"
+        }
+      }
+    },
+    "lib/aave-v3-core/contracts/protocol/libraries/types/DataTypes.sol": {
+      "lastModificationDate": 1668718142959,
+      "contentHash": "c1464f9a5f3b4fb1eaf2bc3fb87722cf",
+      "sourceName": "lib/aave-v3-core/contracts/protocol/libraries/types/DataTypes.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.10",
+      "artifacts": {
+        "DataTypes": {
+          "0.8.10+commit.fc410830.Linux.gcc": "DataTypes.sol/DataTypes.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1668718534363,
+      "contentHash": "e436cea06129be2c73cda4b1acc848b5",
+      "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Ownable": {
+          "0.8.10+commit.fc410830.Linux.gcc": "Ownable.sol/Ownable.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1668718534369,
+      "contentHash": "ad7c2d0af148c8f9f097d65deeb4da6b",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1668718534369,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.10+commit.fc410830.Linux.gcc": "Context.sol/Context.json"
+        }
+      }
+    },
+    "lib/synthetix/contracts/interfaces/IAddressResolver.sol": {
+      "lastModificationDate": 1668717921470,
+      "contentHash": "ef17bb3c4c3d8e51ac5b7fdf2629fa74",
+      "sourceName": "lib/synthetix/contracts/interfaces/IAddressResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.24",
+      "artifacts": {
+        "IAddressResolver": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IAddressResolver.sol/IAddressResolver.json"
+        }
+      }
+    },
+    "lib/synthetix/contracts/interfaces/ISynth.sol": {
+      "lastModificationDate": 1668717921470,
+      "contentHash": "e94c6e6537c26780a11a850aed6c592f",
+      "sourceName": "lib/synthetix/contracts/interfaces/ISynth.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.4.24",
+      "artifacts": {
+        "ISynth": {
+          "0.8.10+commit.fc410830.Linux.gcc": "ISynth.sol/ISynth.json"
+        }
+      }
+    },
+    "lib/synthetix/contracts/interfaces/ISynthetix.sol": {
+      "lastModificationDate": 1668717921470,
+      "contentHash": "2a4d017ebe7aab662b71e5ee81cb9d36",
+      "sourceName": "lib/synthetix/contracts/interfaces/ISynthetix.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/synthetix/contracts/interfaces/ISynth.sol",
+        "lib/synthetix/contracts/interfaces/IVirtualSynth.sol"
+      ],
+      "versionRequirement": ">=0.4.24",
+      "artifacts": {
+        "ISynthetix": {
+          "0.8.10+commit.fc410830.Linux.gcc": "ISynthetix.sol/ISynthetix.json"
+        }
+      }
+    },
+    "lib/synthetix/contracts/interfaces/IVirtualSynth.sol": {
+      "lastModificationDate": 1668717921470,
+      "contentHash": "017cc097b79dba03ae34733ab4899ee5",
+      "sourceName": "lib/synthetix/contracts/interfaces/IVirtualSynth.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/synthetix/contracts/interfaces/ISynth.sol"
+      ],
+      "versionRequirement": ">=0.4.24",
+      "artifacts": {
+        "IVirtualSynth": {
+          "0.8.10+commit.fc410830.Linux.gcc": "IVirtualSynth.sol/IVirtualSynth.json"
+        }
+      }
+    },
+    "src/SNXFlashLoanTool.sol": {
+      "lastModificationDate": 1668958065021,
+      "contentHash": "b4e6e3a3f723d3aba75bdf29d3d8c891",
+      "sourceName": "src/SNXFlashLoanTool.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/aave-v3-core/contracts/flashloan/interfaces/IFlashLoanReceiver.sol",
+        "lib/aave-v3-core/contracts/interfaces/IPool.sol",
+        "lib/aave-v3-core/contracts/interfaces/IPoolAddressesProvider.sol",
+        "lib/aave-v3-core/contracts/protocol/libraries/types/DataTypes.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/synthetix/contracts/interfaces/IAddressResolver.sol",
+        "lib/synthetix/contracts/interfaces/ISynth.sol",
+        "lib/synthetix/contracts/interfaces/ISynthetix.sol",
+        "lib/synthetix/contracts/interfaces/IVirtualSynth.sol",
+        "src/interfaces/ISNXFlashLoanTool.sol"
+      ],
+      "versionRequirement": "^0.8.10",
+      "artifacts": {
+        "SNXFlashLoanTool": {
+          "0.8.10+commit.fc410830.Linux.gcc": "SNXFlashLoanTool.sol/SNXFlashLoanTool.json"
+        }
+      }
+    },
+    "src/interfaces/ISNXFlashLoanTool.sol": {
+      "lastModificationDate": 1668720888404,
+      "contentHash": "ca15677be09c33cfebf51bacacb6b453",
+      "sourceName": "src/interfaces/ISNXFlashLoanTool.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.10",
+      "artifacts": {
+        "ISNXFlashLoanTool": {
+          "0.8.10+commit.fc410830.Linux.gcc": "ISNXFlashLoanTool.sol/ISNXFlashLoanTool.json"
+        }
+      }
+    }
+  }
+}
