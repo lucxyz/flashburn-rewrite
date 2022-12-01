@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.8.10;
-import { BigNumber } from "lib/ethers";
+
 import { Ownable } from "openzeppelin-contracts/access/Ownable.sol";
 import { IERC20 } from "openzeppelin-contracts/token/ERC20/IERC20.sol";
 import { IAddressResolver } from "synthetix/interfaces/IAddressResolver.sol";
@@ -10,7 +10,7 @@ import { IFlashLoanReceiver } from "flashloan-interfaces/IFlashLoanReceiver.sol"
 import { IPoolAddressesProvider } from "aave-interfaces/IPoolAddressesProvider.sol";
 import { IPool } from "aave-interfaces/IPool.sol";
 
-/// @author Ganesh Gautham Elango
+/// @author Ganesh Gautham Elango, modified by Lucxy
 /// @title Burn sUSD debt with SNX using a flash loan
 contract SNXFlashLoanTool is ISNXFlashLoanTool, IFlashLoanReceiver, Ownable {
     /// @dev Synthetix address resolver
